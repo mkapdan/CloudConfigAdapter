@@ -3,7 +3,7 @@ web.xml
 spring context loader
 context;    
  
- <context-param>          
-     <param-name>contextClass</param-name>          
-     <param-value>com.cardif.cloud.config.CloudConfigServerWebApplicationContext</param-value>     
- </context-param> 
+ &ltcontext-param&gt          
+     &ltparam-name&gtcontextClass&lt/param-name&gt          
+     &ltparam-value&gtcom.cardif.cloud.config.CloudConfigServerWebApplicationContext&lt/param-value&gt    
+ &lt/context-param&gt 
