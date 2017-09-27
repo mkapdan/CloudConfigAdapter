@@ -10,6 +10,8 @@ public class CloudConfigConstants {
     public static final String CONFIG_SERVER_ENABLE = "cardif.cloud.config.enable";
     public static final String CONFIG_SERVER_APP_NAME = "spring.application.name";
     public static final String CONFIG_SERVER_PROFILE = "spring.profiles.active";
+    public static final String CLOUD_CONFIG_ADAPTER_PROP_FILE_NAME = "appConfigCloud.properties";
+
 
 
     public static final String CONFIG_SERVER_DEFAULT_ADDRESS = "http://localhost:8888";
