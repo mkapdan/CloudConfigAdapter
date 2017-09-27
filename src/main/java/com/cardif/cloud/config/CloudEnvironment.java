@@ -46,7 +46,7 @@ public class CloudEnvironment extends StandardServletEnvironment {
         ConfigClientProperties configClientProperties = new ConfigClientProperties(environment);
 
         configClientProperties.setUri(environment.getProperty(CloudConfigConstants.CONFIG_SERVER_ADDRESS, CloudConfigConstants.CONFIG_SERVER_DEFAULT_ADDRESS));
-        configClientProperties.setName(environment.getProperty(getSpringApplicationName()));
+        configClientProperties.setName(getSpringApplicationName());
         configClientProperties.setLabel(environment.getProperty(CloudConfigConstants.CONFIG_SERVER_BRANCH, CloudConfigConstants.CONFIG_SERVER_DEFAULT_BRANCH));
         configClientProperties.setUsername(environment.getProperty(CloudConfigConstants.CONFIG_SERVER_USERNAME, CloudConfigConstants.CONFIG_SERVER_DEFAULT_USERNAME));
         configClientProperties.setPassword(environment.getProperty(CloudConfigConstants.CONFIG_SERVER_PASSWORD, CloudConfigConstants.CONFIG_SERVER_DEFAULT_PASSWORD));
