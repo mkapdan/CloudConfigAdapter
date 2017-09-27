@@ -140,4 +140,3 @@ local.properties
 .gitignore
 .idea/
 pom.xml
-src/
