@@ -10,6 +10,6 @@ import java.util.Properties;
 public class CloudConfigServerWebApplicationContext extends XmlWebApplicationContext {
     @Override
     protected ConfigurableEnvironment createEnvironment() {
-        return new CloudEnvironment(ApplicationNameReader.readSpringApplicationName());
+        return new CloudEnvironment();
     }
 }

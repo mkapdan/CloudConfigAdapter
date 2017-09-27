@@ -11,12 +11,6 @@ import org.springframework.web.context.support.StandardServletEnvironment;
 
 public class CloudEnvironment extends StandardServletEnvironment {
 
-    private String springApplicationName;
-
-    public CloudEnvironment(String springApplicationName) {
-        this.springApplicationName=springApplicationName;
-    }
-
     @Override
     protected void customizePropertySources(MutablePropertySources propertySources) {
         super.customizePropertySources(propertySources);
@@ -46,7 +40,7 @@ public class CloudEnvironment extends StandardServletEnvironment {
         ConfigClientProperties configClientProperties = new ConfigClientProperties(environment);
 
         configClientProperties.setUri(environment.getProperty(CloudConfigConstants.CONFIG_SERVER_ADDRESS, CloudConfigConstants.CONFIG_SERVER_DEFAULT_ADDRESS));
-        configClientProperties.setName(getSpringApplicationName());
+        configClientProperties.setName(ApplicationNameReader.readSpringApplicationName());
         configClientProperties.setLabel(environment.getProperty(CloudConfigConstants.CONFIG_SERVER_BRANCH, CloudConfigConstants.CONFIG_SERVER_DEFAULT_BRANCH));
         configClientProperties.setUsername(environment.getProperty(CloudConfigConstants.CONFIG_SERVER_USERNAME, CloudConfigConstants.CONFIG_SERVER_DEFAULT_USERNAME));
         configClientProperties.setPassword(environment.getProperty(CloudConfigConstants.CONFIG_SERVER_PASSWORD, CloudConfigConstants.CONFIG_SERVER_DEFAULT_PASSWORD));
@@ -58,8 +52,4 @@ public class CloudEnvironment extends StandardServletEnvironment {
         return configServicePropertySourceLocator.locate(environment);
     }
 
-    public String getSpringApplicationName() {
-        return springApplicationName;
-    }
-
-}
+  }

@@ -13,7 +13,7 @@ public class CloudConfigServerAnnotationApplicationContext extends AnnotationCon
 
     @Override
     protected ConfigurableEnvironment createEnvironment() {
-        return new CloudEnvironment(ApplicationNameReader.readSpringApplicationName());
+        return new CloudEnvironment();
     }
 
 
